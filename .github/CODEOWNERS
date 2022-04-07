@@ -1,7 +1,7 @@
 # Test CODEOWNERS
 
 # Default owner(s)
-*	@tyamaguchi-ucla  @ucla-cds/software-wg
+*	@tyamaguchi-ucla  @uclahs-cds/nextflow-wg
 
 # Folder specific owner
-/pipeline @yashpatel6 @tyamaguchi-ucla  @zhuchcn
+/config @yashpatel6 @tyamaguchi-ucla  @zhuchcn  @uclahs-cds/nextflow-wg
