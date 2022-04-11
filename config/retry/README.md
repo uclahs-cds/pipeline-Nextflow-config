@@ -3,7 +3,7 @@
 To enable Nextflow's process retry mechanism, set up the configuration for process-specific resource allocation by adding a `retry_strategy` namespace for each process that requires a retry mechanism. In these namespaces, a retry strategy for `memory` and `cpus` can be specified (both are not required, include only the resource(s) that require an update with each retry) as separate namespaces, where each must define a `strategy` (the mathematical operation for updating the resource) and an `operand` (the value used to perform the `strategy`).
 
 Example:
-```
+```Groovy
 process {
     withName: 'proc1' {
         cpus = 4
