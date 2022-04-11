@@ -4,6 +4,7 @@
 - [Overview](#overview)
 - [How to use](#how-to-use)
 - [Available Configs](#available-configs)
+    - [Retry](#retry)
 - [License](#License)
 
 
@@ -17,6 +18,12 @@ A set of Nextflow configs commonly used across pipelines.
 2. Include the required config files and call necessary functions
 
 ## Available Configs
+
+### Retry
+
+[retry.config](./config/retry/retry.config)
+
+[How to enable retry](./config/retry/README.md)
 
 ## License
 
