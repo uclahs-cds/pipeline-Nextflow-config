@@ -25,6 +25,12 @@ A set of Nextflow configs commonly used across pipelines.
 
 [How to enable retry](./config/retry/README.md)
 
+### Schema validation
+
+[schema.config](./config/schema/schema.config)
+
+[How to perform validation](./config/schema/README.md)
+
 ## License
 
 Author: Yash Patel (YashPatel@mednet.ucla.edu)
