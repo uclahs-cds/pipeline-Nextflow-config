@@ -5,6 +5,7 @@
 - [How to use](#how-to-use)
 - [Available Configs](#available-configs)
     - [Retry](#retry)
+    - [Schema validation](#schema-validation)
 - [License](#License)
 
 
