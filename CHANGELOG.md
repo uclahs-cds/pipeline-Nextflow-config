@@ -13,3 +13,4 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Schema validation module
 ### Changed
 - Initial repo set up.
+- Generalize error message
