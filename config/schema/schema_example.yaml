@@ -63,12 +63,12 @@ paired_end:
   help: 'Indicator of whether sample is paired end or not'
   default: 'true'
 input:
-  type: 'InputNamespace' # Custom type
+  type: 'InputNamespace'  # Custom type
   required: true
   help: 'Input samples'
   elements:
     FASTQ:
-      type: 'ListFASTQPairs' # Custom type
+      type: 'ListFASTQPairs'  # Custom type
       required: true
       help: 'Input FASTQs'
       elements:
