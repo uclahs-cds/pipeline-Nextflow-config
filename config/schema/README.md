@@ -14,6 +14,7 @@ To perform automatic validation of parameters:
 ## Available types
 - `Integer`
 - `String`
+    - With this type, an additional definition `allow_empty` can be specified to allow an empty string as input. By default, empty strings will not be allowed.
 - `Number`
 - `List`
 - `Bool`
