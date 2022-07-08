@@ -24,7 +24,9 @@ process {
 
 ## Available strategies:
 - `add` - add `operand` with each retry
+    - With this strategy, the `operand` must match the units of the corresponding resource. Ex. for `memory`, the `operand` must be a memory unit
 - `subtract` - subtract `operand` with each retry
+    - With this strategy, the `operand` must match the units of the corresponding resource. Ex. for `memory`, the `operand` must be a memory unit
 - `exponential` - multiply by `operand` with each retry, results in exponential growth with `operand` > 1 and exponential decay with 0 < `operand` < 1.
 
 
