@@ -7,6 +7,7 @@
     - [Retry](#retry)
     - [Schema validation](#schema-validation)
     - [CSV parser](#csv-parser)
+    - [Methods](#methods)
 - [License](#License)
 
 
@@ -38,6 +39,12 @@ A set of Nextflow configs commonly used across pipelines.
 [csv_parser.config](./config/csv/csv_parser.config)
 
 [How to parse a CSV](./config/csv/README.md)
+
+### Methods
+
+[common_methods.config](./config/methods/common_methods.config)
+
+[How to use common functions](./config/methods/README.md)
 
 ## License
 
