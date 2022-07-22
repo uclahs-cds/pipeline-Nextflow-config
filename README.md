@@ -19,7 +19,7 @@ A set of Nextflow configs commonly used across pipelines.
 ## Available Configs
 
 |Module|Description|
-|:---:|:---:|
+|:---|:---|
 |[retry.config](./config/retry/retry.config)|Enable Nextflow's process retry mechanism ([How to enable retry](./config/retry/README.md))|
 |[schema.config](./config/schema/schema.config)|Automatic parameter validation ([How to perform validation](./config/schema/README.md))|
 |[csv_parser.config](./config/csv/csv_parser.config)|CSV parsing ([How to parse a CSV](./config/csv/README.md))|
