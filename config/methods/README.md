@@ -9,13 +9,18 @@ To use a common `methods` function:
 > - If `common_methods.config` is included *after* the pipeline-specific `methods` namespace, the common function will override the pipeline-specific function
 
 ## Available functions
-- `set_resources_allocation` - Function to load base allocations, detect node type, and node-specific allocations
+- `set_resources_allocation` - Function to load base allocations, detect node type, and node-specific allocations; generally should be called in the pipeline's `methods.set_up()` function
 
 ## Example
 
 ```Nextflow
 includeConfig "/path/to/common_methods.config"
 ...
-methods.set_resources_allocation()
-...
+methods {
+    ...
+    set_up = {
+        ...
+        methods.set_resources_allocation()
+    }
+}
 ```
