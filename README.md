@@ -4,9 +4,6 @@
 - [Overview](#overview)
 - [How to use](#how-to-use)
 - [Available Configs](#available-configs)
-    - [Retry](#retry)
-    - [Schema validation](#schema-validation)
-    - [CSV parser](#csv-parser)
 - [License](#License)
 
 
@@ -21,23 +18,13 @@ A set of Nextflow configs commonly used across pipelines.
 
 ## Available Configs
 
-### Retry
+|Module|Description|
+|:---|:---|
+|[retry.config](./config/retry/retry.config)|Enable Nextflow's process retry mechanism ([How to enable retry](./config/retry/README.md))|
+|[schema.config](./config/schema/schema.config)|Automatic parameter validation ([How to perform validation](./config/schema/README.md))|
+|[csv_parser.config](./config/csv/csv_parser.config)|CSV parsing ([How to parse a CSV](./config/csv/README.md))|
+|[common_methods.config](./config/methods/common_methods.config)|Collection of commonly used config functions ([How to use common functions](./config/methods/README.md))|
 
-[retry.config](./config/retry/retry.config)
-
-[How to enable retry](./config/retry/README.md)
-
-### Schema validation
-
-[schema.config](./config/schema/schema.config)
-
-[How to perform validation](./config/schema/README.md)
-
-### CSV parser
-
-[csv_parser.config](./config/csv/csv_parser.config)
-
-[How to parse a CSV](./config/csv/README.md)
 
 ## License
 

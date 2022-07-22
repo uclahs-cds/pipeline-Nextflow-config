@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Schema validation module
 - Check for empty strings
 - CSV parsing module
+- Common methods module
 ### Changed
 - Initial repo set up.
 - Generalize error message
