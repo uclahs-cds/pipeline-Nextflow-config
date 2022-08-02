@@ -10,6 +10,7 @@ To use a common `methods` function:
 
 ## Available functions
 - `set_resources_allocation` - Function to load base allocations, detect node type, and node-specific allocations; generally should be called in the pipeline's `methods.set_up()` function
+- `generate_uuid` - Function to generate a UUID
 - `generate_registered_output_directory` - Function to generate properly formatted output paths for registered output; requires the following variables to be defined in the `params` namespace: `dataset_id`, `patient_id`, `sample_id`, `analyte`, `technology`, `reference_genome_version`.
     - Positional args:
         |position|name|type|required|default|description|
@@ -28,6 +29,15 @@ methods {
         ...
         methods.set_resources_allocation()
     }
+}
+```
+
+### UUID
+```Nextflow
+methods {
+    ...
+    params.bwa_mem2_uuid = methods.generate_uuid()
+    ...
 }
 ```
 
