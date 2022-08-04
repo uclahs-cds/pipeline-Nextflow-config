@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - CSV parsing module
 - Common methods module
 - Registered output directory generation function
+- Error handling for node-specific configs
 ### Changed
 - Initial repo set up.
 - Generalize error message
