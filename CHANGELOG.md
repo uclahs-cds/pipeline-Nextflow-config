@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Check for empty strings
 - CSV parsing module
 - Common methods module
+- Error handling for node-specific configs
 ### Changed
 - Initial repo set up.
 - Generalize error message
