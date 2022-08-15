@@ -20,7 +20,7 @@ To use a common `methods` function:
     - Positional args:
         |position|name|type|required|default|description|
         |:--:|:--:|:--:|:--:|:--:|:--:|
-        |1|`get_genome_version`|String|No|-|Path from which to extract the reference genome version|
+        |1|`genome_path`|String|No|-|Path from which to extract the reference genome version|
 
 ## Example
 
