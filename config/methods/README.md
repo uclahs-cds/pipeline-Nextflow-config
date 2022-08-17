@@ -16,6 +16,11 @@ To use a common `methods` function:
         |position|name|type|required|default|description|
         |:--:|:--:|:--:|:--:|:--:|:--:|
         |1|`data_dir`|String|No|`"/hot/data"`|Path to registered data directory|
+- `get_genome_version` - Function to extract the reference genome version from a UCLA CDS reference path
+    - Positional args:
+        |position|name|type|required|default|description|
+        |:--:|:--:|:--:|:--:|:--:|:--:|
+        |1|`genome_path`|String|No|-|Path from which to extract the reference genome version|
 
 ## Example
 
@@ -51,5 +56,15 @@ methods {
         ...
         params.base_output_dir = methods.generate_registered_output_directory()
     }
+}
+```
+
+### Get genome version
+```Nextflow
+includeConfig "/path/to/common_methods.config"
+...
+methods {
+    ...
+    genome_version = methods.get_genome_version("/hot/ref/reference/GRCh38-BI-20160721/Homo_sapiens_assembly38.fasta")
 }
 ```
