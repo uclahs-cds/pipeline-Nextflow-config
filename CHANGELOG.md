@@ -22,6 +22,6 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Error handling for node-specific configs
 - Reference genome version extraction function
 ### Changed
-- Initial repo set up.
+- Initial repo set up
 - Generalize error message
 - Clarify retry README
