@@ -21,6 +21,7 @@ To use a common `methods` function:
         |position|name|type|required|default|description|
         |:--:|:--:|:--:|:--:|:--:|:--:|
         |1|`genome_path`|String|No|-|Path from which to extract the reference genome version|
+- `merge_publish_dirs` - Function to merge the publishDir rules between process-level and process-specific rules
 
 ## Example
 
@@ -66,5 +67,15 @@ includeConfig "/path/to/common_methods.config"
 methods {
     ...
     genome_version = methods.get_genome_version("/hot/ref/reference/GRCh38-BI-20160721/Homo_sapiens_assembly38.fasta")
+}
+```
+
+### Merge `publishDir` rules
+```Nextflow
+includeConfig "/path/to/common_methods.config"
+...
+methods {
+    ...
+    methods.merge_publish_dirs()
 }
 ```
