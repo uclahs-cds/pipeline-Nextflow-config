@@ -21,6 +21,11 @@ To use a common `methods` function:
         |position|name|type|required|default|description|
         |:--:|:--:|:--:|:--:|:--:|:--:|
         |1|`genome_path`|String|No|-|Path from which to extract the reference genome version|
+- `load_publish_dirs` - Function to load a config file containing publishDir rules for processes
+    - Positional args:
+        |position|name|type|required|default|description|
+        |:--:|:--:|:--:|:--:|:--:|:--:|
+        |1|`file_path`|String|No|`${projectDir}/config/module.config`|Path to config file containing publishDir rules|
 - `merge_publish_dirs` - Function to merge the publishDir rules between process-level and process-specific rules
 
 ## Example
@@ -70,12 +75,13 @@ methods {
 }
 ```
 
-### Merge `publishDir` rules
+### Load and merge `publishDir` rules
 ```Nextflow
 includeConfig "/path/to/common_methods.config"
 ...
 methods {
     ...
+    methods.load_publish_dirs()
     methods.merge_publish_dirs()
 }
 ```
