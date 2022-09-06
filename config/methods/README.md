@@ -27,6 +27,7 @@ To use a common `methods` function:
         |:--:|:--:|:--:|:--:|:--:|:--:|
         |1|`file_path`|String|No|`${projectDir}/config/module.config`|Path to config file containing publishDir rules|
 - `merge_publish_dirs` - Function to merge the publishDir rules between process-level and process-specific rules
+    > For the `publishDir` rules, use the `disable_common_rules` option within each process where the common process-level rules *should not* be used. Ex. use this option to disable the common log file rule and use a custom one when needed by a process.
 
 ## Example
 
