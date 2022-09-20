@@ -4,6 +4,7 @@
 - [Overview](#overview)
 - [How to use](#how-to-use)
 - [Available Configs](#available-configs)
+- [References](#references)
 - [License](#License)
 
 
@@ -25,6 +26,9 @@ A set of Nextflow configs commonly used across pipelines.
 |[csv_parser.config](./config/csv/csv_parser.config)|CSV parsing ([How to parse a CSV](./config/csv/README.md))|
 |[common_methods.config](./config/methods/common_methods.config)|Collection of commonly used config functions ([How to use common functions](./config/methods/README.md))|
 
+## References
+1. `nf-core` - https://nf-co.re/
+2. `nf-code modules` - https://github.com/nf-core/sarek/blob/ad2b34f39fead34d7a09051e67506229e827e892/conf/modules.config
 
 ## License
 

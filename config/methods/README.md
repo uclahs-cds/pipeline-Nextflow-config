@@ -86,3 +86,6 @@ methods {
     methods.merge_publish_dirs()
 }
 ```
+## References
+1. `nf-core` - https://nf-co.re/
+2. `nf-code modules` - https://github.com/nf-core/sarek/blob/ad2b34f39fead34d7a09051e67506229e827e892/conf/modules.config
