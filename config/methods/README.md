@@ -21,6 +21,13 @@ To use a common `methods` function:
         |position|name|type|required|default|description|
         |:--:|:--:|:--:|:--:|:--:|:--:|
         |1|`genome_path`|String|No|-|Path from which to extract the reference genome version|
+- `load_publish_dirs` - Function to load a config file containing publishDir rules for processes
+    - Positional args:
+        |position|name|type|required|default|description|
+        |:--:|:--:|:--:|:--:|:--:|:--:|
+        |1|`file_path`|String|No|`${projectDir}/config/module.config`|Path to config file containing publishDir rules|
+- `merge_publish_dirs` - Function to merge the publishDir rules between process-level and process-specific rules
+    > For the `publishDir` rules, use the `disable_common_rules` option within each process where the common process-level rules *should not* be used. Ex. use this option to disable the common log file rule and use a custom one when needed by a process.
 
 ## Example
 
@@ -68,3 +75,17 @@ methods {
     genome_version = methods.get_genome_version("/hot/ref/reference/GRCh38-BI-20160721/Homo_sapiens_assembly38.fasta")
 }
 ```
+
+### Load and merge `publishDir` rules
+```Nextflow
+includeConfig "/path/to/common_methods.config"
+...
+methods {
+    ...
+    methods.load_publish_dirs()
+    methods.merge_publish_dirs()
+}
+```
+## References
+1. `nf-core` - https://nf-co.re/
+2. `nf-code modules` - https://github.com/nf-core/sarek/blob/ad2b34f39fead34d7a09051e67506229e827e892/conf/modules.config
