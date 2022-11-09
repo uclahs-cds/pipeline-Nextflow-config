@@ -61,7 +61,7 @@ methods {
     ...
     set_output_dir = {
         ...
-        params.base_output_dir = methods.generate_registered_output_directory()
+        params.output_dir_base = methods.generate_registered_output_directory()
     }
 }
 ```
