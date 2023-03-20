@@ -47,6 +47,13 @@ To perform automatic validation of parameters:
         |:--:|:--:|:--:|:--:|:--:|:--:|
         |1|`p`|String|Yes|none|Path to to validate|
         |2|`mode`|String|Yes|none|Permission to check, `w` to check if path is writeable and `r` to check if path is readable|
+- `validate_specific` - Function for validating specific namespaces and schemas along with an exclusion list
+    - Positional args:
+        |position|name|type|required|default|description|
+        |:--:|:--:|:--:|:--:|:--:|:--:|
+        |1|`file_path`|String|Yes|none|Path to the `schema.yaml` file|
+        |2|`params_to_validate`|Map|Yes|none|Namespace of parameters to validate|
+        |3|`keys_to_exclude`|List|No|`[]`|List of parameters to skip validation|
 
 ## Example
 
