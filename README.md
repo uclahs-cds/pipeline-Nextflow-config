@@ -24,6 +24,7 @@ A set of Nextflow configs commonly used across pipelines.
 |[retry.config](./config/retry/retry.config)|Enable Nextflow's process retry mechanism ([How to enable retry](./config/retry/README.md))|
 |[schema.config](./config/schema/schema.config)|Automatic parameter validation ([How to perform validation](./config/schema/README.md))|
 |[csv_parser.config](./config/csv/csv_parser.config)|CSV parsing ([How to parse a CSV](./config/csv/README.md))|
+|[bam_parser.config](./config/bam/bam_parser.config)|BAM parsing ([How to parse a BAM](./config/bam/README.md))|
 |[common_methods.config](./config/methods/common_methods.config)|Collection of commonly used config functions ([How to use common functions](./config/methods/README.md))|
 
 ## References
