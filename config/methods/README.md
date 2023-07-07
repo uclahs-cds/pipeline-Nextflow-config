@@ -93,6 +93,18 @@ methods {
     methods.merge_publish_dirs()
 }
 ```
+
+### Update base resource allocation
+```Nextflow
+includeConfig "/path/to/common_methods.config"
+...
+methods {
+    ...
+    methods.update_base_resource_allocation('memory', params.memory_multiplier) // Updates memory for all processes
+    methods.update_base_resource_allocation('memory', params.memory_multiplier, ['process_1', 'process_3']) // Updates memory for the given list of processes
+}
+```
+
 ## References
 1. `nf-core` - https://nf-co.re/
 2. `nf-code modules` - https://github.com/nf-core/sarek/blob/ad2b34f39fead34d7a09051e67506229e827e892/conf/modules.config
