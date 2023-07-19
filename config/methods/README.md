@@ -35,6 +35,7 @@ To use a common `methods` function:
         |1|`resource`|String|Yes|-|Resource (`cpus`, `memory`) to update|
         |2|`multiplier`|Float|Yes|-|Float to multiply existing allocation value by for update|
         |3|`processes`|List|No|`[]`|Optional list of processes to apply update to. With default or empty list, all processes will be update|
+- `set_env` - Function to set the workDir depending on parameters and on Slurm job ID
 
 ## Example
 
@@ -102,6 +103,16 @@ methods {
     ...
     methods.update_base_resource_allocation('memory', params.memory_multiplier) // Updates memory for all processes
     methods.update_base_resource_allocation('memory', params.memory_multiplier, ['process_1', 'process_3']) // Updates memory for the given list of processes
+}
+```
+
+### Set env
+```Nextflow
+includeConfig "/path/to/common_methods.config"
+...
+methods {
+    ...
+    methods.set_env()
 }
 ```
 
