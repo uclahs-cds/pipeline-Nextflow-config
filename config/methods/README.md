@@ -28,6 +28,13 @@ To use a common `methods` function:
         |1|`file_path`|String|No|`${projectDir}/config/module.config`|Path to config file containing publishDir rules|
 - `merge_publish_dirs` - Function to merge the publishDir rules between process-level and process-specific rules
     > For the `publishDir` rules, use the `disable_common_rules` option within each process where the common process-level rules *should not* be used. Ex. use this option to disable the common log file rule and use a custom one when needed by a process.
+- `update_base_resource_allocation` - Function to update the base resource allocation for any number of processes
+    - Positional args:
+        |position|name|type|required|default|description|
+        |:--:|:--:|:--:|:--:|:--:|:--:|
+        |1|`resource`|String|Yes|-|Resource (`cpus`, `memory`) to update|
+        |2|`multiplier`|Float|Yes|-|Float to multiply existing allocation value by for update|
+        |3|`processes`|List|No|`[]`|Optional list of processes to apply update to. With default or empty list, all processes will be update|
 
 ## Example
 
@@ -86,6 +93,18 @@ methods {
     methods.merge_publish_dirs()
 }
 ```
+
+### Update base resource allocation
+```Nextflow
+includeConfig "/path/to/common_methods.config"
+...
+methods {
+    ...
+    methods.update_base_resource_allocation('memory', params.memory_multiplier) // Updates memory for all processes
+    methods.update_base_resource_allocation('memory', params.memory_multiplier, ['process_1', 'process_3']) // Updates memory for the given list of processes
+}
+```
+
 ## References
 1. `nf-core` - https://nf-co.re/
 2. `nf-code modules` - https://github.com/nf-core/sarek/blob/ad2b34f39fead34d7a09051e67506229e827e892/conf/modules.config
