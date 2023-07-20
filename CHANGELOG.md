@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - BAM parsing module
 - Funtion to update base resource allocation values
 - Env setting function
+- Function to use CPUs with Docker
 ### Fixed
 - BAM parser failing if multiple lines needed to be skipped
 
