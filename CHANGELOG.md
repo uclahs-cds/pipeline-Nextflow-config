@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 ### Added
+- `get_absolute_path` function to resolve a path relative to the current configu file
 - Function for merging `publishDir` rules
 - Check for empty lists
 - Function for specific schema validation
