@@ -19,7 +19,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Fixed
 - BAM parser failing if multiple lines needed to be skipped
 ### Changed
-- Modify to be more specific
+- Modify exceptions to be more specific
 ---
 
 ## [1.0.0] - 2022-08-24
