@@ -37,6 +37,7 @@ To use a common `methods` function:
         |3|`processes`|List|No|`[]`|Optional list of processes to apply update to. With default or empty list, all processes will be update|
 - `set_env` - Function to set the workDir depending on parameters and on Slurm job ID
 - `setup_docker_cpus` - Function to use allocated CPUs for a process to specify number of CPUs rather than CPU shares with Docker
+- `get_absolute_path` - Function to resolve a path relative to the currently-loading configuration file into an absolute path
 
 ## Example
 
@@ -124,6 +125,19 @@ includeConfig "/path/to/common_methods.config"
 methods {
     ...
     methods.setup_docker_cpus()
+}
+```
+
+### Resolve a path relative to the currently-loading configuration file into an absolute path
+
+This is not just a replacement for `${projectDir}`, which is set to the directory containing the entrypoint NextFlow script. This function allows you to use paths relative to the config file, which could be located in an entirely different area.
+
+```Nextflow
+includeConfig "/path/to/common_methods.config"
+...
+methods {
+    ...
+    output_dir = methods.get_absolute_path('../local_outputs')
 }
 ```
 
