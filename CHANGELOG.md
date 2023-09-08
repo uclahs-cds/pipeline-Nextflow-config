@@ -17,7 +17,11 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Funtion to update base resource allocation values
 - Env setting function
 - Function to use CPUs with Docker to circumvent behavior introduced by Nextflow starting in [v22.11.0-edge](https://github.com/nextflow-io/nextflow/releases/tag/v22.11.0-edge)
+<<<<<<< HEAD
 - Function for resolving pipelines in metapipelines
+=======
+- Common align methods
+>>>>>>> 36097e1 (update changelog)
 ### Fixed
 - BAM parser failing if multiple lines needed to be skipped
 ### Changed
