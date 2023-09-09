@@ -23,6 +23,10 @@ includConfig "/path/to/pipeline_selector.config"
 ...
 methods {
     ...
+    Map pipeline_dependencies = [
+        'pipeline-1': ['pipeline-2'],
+        'pipeline-2': ['pipeline-3', 'pipeline-4']
+    ]
     List pipelines_to_run = pipeline_selector.get_pipelines(pipeline_dependencies, params.requested_pipelines)
 }
 ```

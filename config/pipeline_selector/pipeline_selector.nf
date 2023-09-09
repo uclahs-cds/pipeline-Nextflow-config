@@ -5,7 +5,7 @@ pipeline_selector {
     /**
     *   Ensure requested pipelines are valid
     */
-    check_pipelines = { Map dependencies, List pipelines ->
+    validate_pipelines = { Map dependencies, List pipelines ->
         def unexpected_pipelines = []
         pipelines.each{ pipeline ->
             if (! dependencies.containsKey(pipeline)) {
@@ -45,7 +45,7 @@ pipeline_selector {
             return pipeline_dependencies.keySet() as List
         }
 
-        pipeline_selector.check_pipelines(pipeline_dependencies, requested_pipelines)
+        pipeline_selector.validate_pipelines(pipeline_dependencies, requested_pipelines)
 
         return pipeline_selector.resolve_dependencies(requested_pipelines, pipeline_dependencies)
     }
