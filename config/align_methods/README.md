@@ -25,7 +25,7 @@ methods {
 ```
 
 ## Custom schema types
-- 'InputNamespace': Used for align-DNA and -RNA inputs; Check that input is namespace of expected types
-- 'ListFASTQPairs': Used for input FASTQ list; Check that input is list of namespace of expected types
+- `InputNamespace`: Used for align-DNA and -RNA inputs; Check that input is namespace of expected types
+- `ListFASTQPairs`: Used for input FASTQ list; Check that input is list of namespace of expected types
 
 ## References

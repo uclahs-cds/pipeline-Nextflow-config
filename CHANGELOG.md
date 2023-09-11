@@ -23,7 +23,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Fixed
 - BAM parser failing if multiple lines needed to be skipped
-- Schema config function `load_custom_types()` overwriting previously loaded custum types if called multiple times
+- Schema config function `load_custom_types()` overwriting previously loaded custom types if called multiple times
 
 ### Changed
 - Modify exceptions to be more specific
