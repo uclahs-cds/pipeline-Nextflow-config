@@ -22,7 +22,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Option for user to overwrite previously loaded custum types by calling `schema.load_custom_types()` with argument `purge_existing_custom_types=true`
 ### Fixed
 - BAM parser failing if multiple lines needed to be skipped
+<<<<<<< HEAD
 - Schema config function `load_custom_types()` overwriting previously loaded custum types if called multiple times
+=======
+- Schema config function `load_custom_types()` overwriting previously loaded custom types if called multiple times
+
+>>>>>>> 55ead3e (minor changes)
 ### Changed
 - Modify exceptions to be more specific
 - Common functions for align-DNA and -RNA

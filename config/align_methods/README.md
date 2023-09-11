@@ -50,8 +50,8 @@ methods {
 >>>>>>> 96ae992 (add a readme for align methods)
 =======
 ## Custom schema types
-- 'InputNamespace': Used for align-DNA and -RNA inputs; Check that input is namespace of expected types
-- 'ListFASTQPairs': Used for input FASTQ list; Check that input is list of namespace of expected types
+- `InputNamespace`: Used for align-DNA and -RNA inputs; Check that input is namespace of expected types
+- `ListFASTQPairs`: Used for input FASTQ list; Check that input is list of namespace of expected types
 
 >>>>>>> 09ec9cb (removed not yet modularized custom types from custom_schema_types.config; fix load_custom_types() overwriting previously loaded custum types; add option for user to overwrite previously loaded custum types; updated changelog and readmes)
 ## References
