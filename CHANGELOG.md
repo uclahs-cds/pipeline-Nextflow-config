@@ -18,10 +18,17 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Env setting function
 - Function to use CPUs with Docker to circumvent behavior introduced by Nextflow starting in [v22.11.0-edge](https://github.com/nextflow-io/nextflow/releases/tag/v22.11.0-edge)
 - Function for resolving pipelines in metapipelines
+- Common functions for align-DNA and -RNA
+- Option for user to overwrite previously loaded custum types by calling `schema.load_custom_types()` with argument `purge_existing_custom_types=true`
+
 ### Fixed
 - BAM parser failing if multiple lines needed to be skipped
+- Schema config function `load_custom_types()` overwriting previously loaded custum types if called multiple times
 ### Changed
 - Modify exceptions to be more specific
+- Common functions for align-DNA and -RNA
+- Option for user to overwrite previously loaded custum types by calling `schema.load_custom_types()` with argument `purge_existing_custom_types=true`
+
 ---
 
 ## [1.0.0] - 2022-08-24

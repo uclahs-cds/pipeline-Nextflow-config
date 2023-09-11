@@ -27,6 +27,7 @@ A set of Nextflow configs commonly used across pipelines.
 |[bam_parser.config](./config/bam/bam_parser.config)|BAM parsing ([How to parse a BAM](./config/bam/README.md))|
 |[common_methods.config](./config/methods/common_methods.config)|Collection of commonly used config functions ([How to use common functions](./config/methods/README.md))|
 |[pipeline_selector.config](./config/pipeline_selector/pipeline_selector.nf)|Functions for resolving pipeline dependencies ([How to resolve pipeline dependencies](./config/pipeline_selector/README.md))|
+|[align_methods.config](./config/align_methods/align_methods.config)|Collection of commonly used config functions for align-DNA and -RNA ([How to use common align pipeline functions](./config/align_methods/README.md))|
 
 ## References
 1. `nf-core` - https://nf-co.re/
