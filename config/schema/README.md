@@ -34,6 +34,7 @@ To perform automatic validation of parameters:
         |position|name|type|required|default|description|
         |:--:|:--:|:--:|:--:|:--:|:--:|
         |1|`custom_types_path`|String|Yes|`null`|Path to config file defining custom types|
+        |2|`purge_existing_custom_types`|Boolean|No|`false`|Option to overwrite previously loaded custom types|
 - `validate_parameter` - Function for recursively validating a parameter
     - Positional args:
         |position|name|type|required|default|description|
