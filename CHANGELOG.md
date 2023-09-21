@@ -24,6 +24,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Fixed
 - BAM parser failing if multiple lines needed to be skipped
 - Schema config function `load_custom_types()` overwriting previously loaded custom types if called multiple times
+- workDir parity to handle `NXF_WORK` setting
 
 ### Changed
 - Modify exceptions to be more specific
