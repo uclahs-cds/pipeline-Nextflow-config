@@ -11,6 +11,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
+## [1.2.0] - 2023-10-06
+### Added
+- Custom validation types and functions for BAMs
+
+---
+
 ## [1.1.0] - 2023-10-06
 ### Added
 - Generic resource allocations for outside ucla_cds
