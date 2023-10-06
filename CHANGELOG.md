@@ -8,6 +8,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ---
 
 ## [Unreleased]
+
+---
+
+## [1.1.0] - 2023-10-06
 ### Added
 - Generic resource allocations for outside ucla_cds
 - `get_absolute_path` function to resolve a path relative to the current configu file
