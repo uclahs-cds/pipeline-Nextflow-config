@@ -23,6 +23,47 @@ To perform automatic validation of parameters:
 - `Path`
     - With this type, an additional definition `mode` must be specified, indicating whether the associated parameter needs to be readable (`mode: 'r'`) or writeable (`mode: 'w'`)
 
+## Available custom types
+- `InputNamespace` - Validation type for a namespace specifying inputs
+```YAML
+input: <<InputNamespace>>
+    BAM:
+        ...
+```
+- `ListFASTQPairs` - Validation type for a list of FASTQ pair Maps
+```YAML
+input:
+    FASTQ: <<ListFASTQPairs>>
+        - read_group_identifier: <readgroup ID>
+          sample: <sample ID>
+          ...
+        - read_group_identifier: <readgroup ID>
+          sample: <sample ID>
+          ...
+```
+- `InputBAMNamespace` - Validation type for a namespace containing BAMs
+```YAML
+input:
+    BAM: <<InputBAMNamespace>>
+        normal:
+            - "/path/to/bam"
+            - "/path/to/bam"
+        tumor:
+            - "/path/to/bam"
+            - "/path/to/bam"
+```
+- `BAMEntryList` - Validation type for a list of BAMs
+```YAML
+input:
+    BAM:
+        normal: <<BAMEntryList>>
+            - "/path/to/bam"
+            - "/path/to/bam"
+        tumor: <<BAMEntryList>>
+            - "/path/to/bam"
+            - "/path/to/bam"
+```
+
 ## Available functions
 - `validate` - The entrypoint function for validating the parameters
     - Positional args:
