@@ -4,7 +4,7 @@ name: Self-Tests
 on:
   push:
     branches:
-      - nwiltsie_testing
+      - main
   pull_request:
     branches:
       - main
