@@ -4,13 +4,13 @@ import java.nio.file.Paths
 import nextflow.util.ConfigHelper
 import org.junit.Test
 
-import bl.NextflowConfigTests
+import validator.bl.NextflowConfigTests
 
 class SetEnvTests extends NextflowConfigTests {
     protected Path get_projectDir() {
         return Paths.get(
             getClass().protectionDomain.codeSource.location.path
-        ).getParent()
+        ).getParent().getParent()
     }
 
     @Override

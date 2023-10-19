@@ -1,0 +1,41 @@
+---
+name: Self-Tests
+
+on:
+  push:
+    branches:
+      - nwiltsie_testing
+  pull_request:
+    branches:
+      - main
+jobs:
+  Self-Tests:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build image, cache with GitHub Actions
+        uses: docker/build-push-action@v4
+        with:
+          context: ./tests
+          load: true
+          tags: configtest:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Test the config files
+        run: |
+          docker run \
+            --rm \
+            -v ${{ github.workspace}}:/pipeline \
+            -w /pipeline/tests \
+            --entrypoint nextflow \
+            configtest:${{ github.sha }} \
+            pipeline/tests/suite.groovy
