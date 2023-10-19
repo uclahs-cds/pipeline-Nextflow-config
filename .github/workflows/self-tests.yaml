@@ -38,4 +38,4 @@ jobs:
             -w /pipeline/tests \
             --entrypoint nextflow \
             configtest:${{ github.sha }} \
-            pipeline/tests/suite.groovy
+            suite.groovy

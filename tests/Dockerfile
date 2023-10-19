@@ -4,7 +4,7 @@ ARG NEXTFLOW_VERSION=23.10.0
 # Download system-rules and groovy-test using Maven
 FROM maven:${MAVEN_VERSION} AS builder
 COPY config/pom.xml /pom.xml
-RUN mvn dependency:copy-dependencies -DoutputDirectory=/bljars
+RUN mvn --batch-mode dependency:copy-dependencies -DoutputDirectory=/bljars
 
 FROM nextflow/nextflow:${NEXTFLOW_VERSION}
 
