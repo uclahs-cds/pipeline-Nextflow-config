@@ -3,6 +3,7 @@ package validator.bl
 import org.junit.Before
 import org.junit.Rule
 import org.junit.contrib.java.lang.system.EnvironmentVariables
+import org.junit.rules.TemporaryFolder
 
 import groovy.util.ConfigObject
 import java.nio.file.Path
@@ -16,6 +17,9 @@ abstract class NextflowConfigTests {
 
     @Rule
     public final EnvironmentVariables envvars = new EnvironmentVariables()
+
+    @Rule
+    public TemporaryFolder testFolder = new TemporaryFolder()
 
     @Before
     public void setup() {

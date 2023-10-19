@@ -31,9 +31,9 @@ class SetEnvTests extends NextflowConfigTests {
         compare()
     }
 
-    @Test
+   @Test
    void envvar_set_env() {
-        def value = "/work/directory"
+        def value = testFolder.getRoot().toString()
         envvars.set("NXF_WORK", value)
         expected.params.work_dir = value
         compare()
@@ -41,7 +41,7 @@ class SetEnvTests extends NextflowConfigTests {
 
     @Test
     void params_set_env() {
-        def value = "/work/directory/unique"
+        def value = testFolder.getRoot().toString()
         inconfig.params.work_dir = value
         expected.params.work_dir = value
         compare()
@@ -49,7 +49,7 @@ class SetEnvTests extends NextflowConfigTests {
 
     @Test
     void standardized_set_env() {
-        def value = "/work/directory/other"
+        def value = testFolder.getRoot().toString()
 
         inconfig.params.ucla_cds = true
         inconfig.params.work_dir = value
