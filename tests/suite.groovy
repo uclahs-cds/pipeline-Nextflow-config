@@ -4,7 +4,8 @@ import org.junit.runner.JUnitCore
 result = JUnitCore.runClasses \
     ExampleTests, \
     SetEnvTests, \
-    AlignMethodsTests
+    AlignMethodsTests, \
+    BamParserTests
 
 String message = "Ran: " + result.getRunCount() + ", Ignored: " + result.getIgnoreCount() + ", Failed: " + result.getFailureCount()
 if (result.wasSuccessful()) {
