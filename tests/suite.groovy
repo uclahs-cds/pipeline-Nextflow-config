@@ -10,7 +10,13 @@ if (result.wasSuccessful()) {
     println "FAILURE! " + message
     result.getFailures().each {
         println "Test Failure: ${it.getTestHeader()}"
-        println it.getException()
+        if (it.getException() instanceof java.lang.AssertionError) {
+            // We don't care about the stack trace of assertion errors
+            println it.getException()
+        } else {
+            // This will include the exception's message _and_ the traceback
+            println it.getTrace()
+        }
     }
     System.exit(1)
 }
