@@ -14,10 +14,10 @@ while [ -L "$SOURCE" ]; do
 done
 SCRIPT_DIR=$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )
 
-REPO_DIR=$(dirname "$DIR")
+REPO_DIR=$(dirname "$SCRIPT_DIR")
 IMAGE="tool-nextflow-config-tester"
 
-docker build "$DIR" -t "$IMAGE"
+docker build "$SCRIPT_DIR" -t "$IMAGE"
 
 docker run \
     -it \
