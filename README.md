@@ -29,6 +29,12 @@ A set of Nextflow configs commonly used across pipelines.
 |[pipeline_selector.config](./config/pipeline_selector/pipeline_selector.nf)|Functions for resolving pipeline dependencies ([How to resolve pipeline dependencies](./config/pipeline_selector/README.md))|
 |[align_methods.config](./config/align_methods/align_methods.config)|Collection of commonly used config functions for align-DNA and -RNA ([How to use common align pipeline functions](./config/align_methods/README.md))|
 
+## Regression Testing
+Regression tests for the functions supplied by this repository are located in the [tests directory](./tests/). The tests are automatically run on every pull request, and can be run locally with the `./tests/run_tests.sh` script.
+
+### Adding New Tests
+The tests are written for compatibility with [JUnit4](https://junit.org/junit4/) and [Groovy testing](https://groovy-lang.org/testing.html). New tests can be added using [ExampleTests.groovy](./tests/ExampleTests.groovy) as a template.
+
 ## References
 1. `nf-core` - https://nf-co.re/
 2. `nf-code modules` - https://github.com/nf-core/sarek/blob/ad2b34f39fead34d7a09051e67506229e827e892/conf/modules.config
