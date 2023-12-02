@@ -1,7 +1,11 @@
 // https://stackoverflow.com/a/4115972
 import org.junit.runner.JUnitCore
 
-result = JUnitCore.runClasses SetEnvTests, AlignMethodsTests
+result = JUnitCore.runClasses \
+    ExampleTests, \
+    SetEnvTests, \
+    AlignMethodsTests, \
+    BamParserTests
 
 String message = "Ran: " + result.getRunCount() + ", Ignored: " + result.getIgnoreCount() + ", Failed: " + result.getFailureCount()
 if (result.wasSuccessful()) {
