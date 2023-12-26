@@ -13,6 +13,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Functional test for `bam_parser.parse_bam_header()`.
 - Dump parameters with `json_extractor.store_params_json()`
 
+### Fixed
+- Fixed retry for potentially undefined variable `proc_name_set`. #57
+
 ---
 
 ## [1.2.0] - 2023-10-06
