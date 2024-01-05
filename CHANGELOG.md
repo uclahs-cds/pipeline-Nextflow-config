@@ -14,7 +14,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Dump parameters with `json_extractor.store_params_json()`
 
 ### Fixed
-- Fixed retry for potentially undefined variable `proc_name_set`. #57
+- Fixed retry for potentially undefined variable `proc_name_keys`. #57
 
 ---
 
