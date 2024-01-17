@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 ### Added
-- `sanitize_string` function
+- `sanitize_uclahs_cds_id` function
 - Functional testing framework with concrete tests for `methods.set_env()`
 - Functional test for `bam_parser.parse_bam_header()`.
 - Dump parameters with `json_extractor.store_params_json()`

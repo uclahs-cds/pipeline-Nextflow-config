@@ -38,7 +38,7 @@ To use a common `methods` function:
 - `set_env` - Function to set the workDir depending on parameters and on Slurm job ID
 - `setup_docker_cpus` - Function to use allocated CPUs for a process to specify number of CPUs rather than CPU shares with Docker
 - `get_absolute_path` - Function to resolve a path relative to the currently-loading configuration file into an absolute path
-- `sanitize_string` - Pass input string to sanitize, i.e. keeping only alphanumeric, `-`, `/`, and `.` characters and replacing `_` with `-`
+- `sanitize_uclahs_cds_id` - Pass input string to sanitize, i.e. keeping only alphanumeric, `-`, `/`, and `.` characters and replacing `_` with `-`
 
 ## Example
 
