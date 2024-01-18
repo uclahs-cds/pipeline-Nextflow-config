@@ -141,6 +141,15 @@ methods {
     output_dir = methods.get_absolute_path('../local_outputs')
 }
 ```
+### Sanitize uclahs-cds ID
+```Nextflow
+includeConfig "/path/to/common_methods.config"
+...
+methods {
+    ...
+    new_sm_tag = methods.sanitize_uclahs_cds_id(sm_tags[0])
+}
+```
 
 ## References
 1. `nf-core` - https://nf-co.re/
