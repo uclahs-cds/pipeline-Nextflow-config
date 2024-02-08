@@ -17,6 +17,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Fixed
 - Fixed retry for potentially undefined variable `proc_name_keys`. #57
 
+### Changed
+- Allow `set_resources_allocation` to use maximum allocation values defined in params
+
 ---
 
 ## [1.2.0] - 2023-10-06
