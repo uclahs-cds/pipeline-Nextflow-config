@@ -93,7 +93,7 @@ input:
     - Positional args:
         |position|name|type|required|default|description|
         |:--:|:--:|:--:|:--:|:--:|:--:|
-        |1|`file_path`|String|Yes|none|Path to the `schema.yaml` file|
+        |1|`file_path`|String or Map|Yes|none|Path to the `schema.yaml` file or loaded schema as a Map|
         |2|`params_to_validate`|Map|Yes|none|Namespace of parameters to validate|
         |3|`keys_to_exclude`|List|No|`[]`|List of parameters to skip validation|
 
