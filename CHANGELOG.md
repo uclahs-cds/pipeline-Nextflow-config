@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Functional testing framework with concrete tests for `methods.set_env()`
 - Functional test for `bam_parser.parse_bam_header()`.
 - Dump parameters with `json_extractor.store_params_json()`
+- Function to save process logs, even after failure
 
 ### Fixed
 - Fixed retry for potentially undefined variable `proc_name_keys`. #57
