@@ -191,6 +191,14 @@ Each of the above can be overridden by individual processes.
 
 The final directory path is `${params.log_output_dir}/process-log/${task.ext.log_dir}${task.ext.log_dir_suffix}`.
 
+#### Disabling for individual processes
+
+```Nextflow
+process xxx {
+
+    ext capture_logs: false
+```
+
 #### Combining with `afterScript`
 
 > [!IMPORTANT]
