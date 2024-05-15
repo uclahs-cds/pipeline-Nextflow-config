@@ -19,6 +19,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Changed
 - Allow `set_resources_allocation` to use maximum allocation values defined in params
+- Add `def`s to multiple variables that should not be globally defined
+- Allow specific schema validation function to accept pre-loaded schema as input
 
 ---
 
