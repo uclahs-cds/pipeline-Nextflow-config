@@ -16,11 +16,13 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Fixed
 - Fixed retry for potentially undefined variable `proc_name_keys`. #57
+- Fix `schema.check_write_permission` when `null` is returned by `getParentFile` #59
 
 ### Changed
 - Allow `set_resources_allocation` to use maximum allocation values defined in params
 - Add `def`s to multiple variables that should not be globally defined
 - Allow specific schema validation function to accept pre-loaded schema as input
+- Add try-catch to schema validation to log the parameter being failed to validate.
 
 ---
 
