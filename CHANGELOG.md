@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Functional testing framework with concrete tests for `methods.set_env()`
 - Functional test for `bam_parser.parse_bam_header()`.
 - Dump parameters with `json_extractor.store_params_json()`
+- Option to allow empty fields in a CSV to be parsed without error
 - Function to save process logs, even after failure
 
 ### Fixed
