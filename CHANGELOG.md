@@ -25,6 +25,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Add `def`s to multiple variables that should not be globally defined
 - Allow specific schema validation function to accept pre-loaded schema as input
 - Add try-catch to schema validation to log the parameter being failed to validate.
+- Rename `check_bam_list` function to more general `check_readable_file_list`
 
 ---
 
