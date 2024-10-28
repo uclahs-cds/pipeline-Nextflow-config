@@ -83,7 +83,7 @@ includeConfig "/path/to/common_methods.config"
 ...
 methods {
     ...
-    genome_version = methods.get_genome_version("/hot/ref/reference/GRCh38-BI-20160721/Homo_sapiens_assembly38.fasta")
+    genome_version = methods.get_genome_version("/hot/resource/reference-genome/GRCh38-BI-20160721/Homo_sapiens_assembly38.fasta")
 }
 ```
 
