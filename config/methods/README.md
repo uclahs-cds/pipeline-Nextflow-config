@@ -83,7 +83,7 @@ includeConfig "/path/to/common_methods.config"
 ...
 methods {
     ...
-    genome_version = methods.get_genome_version("/hot/ref/reference/GRCh38-BI-20160721/Homo_sapiens_assembly38.fasta")
+    genome_version = methods.get_genome_version("/hot/resource/reference-genome/GRCh38-BI-20160721/Homo_sapiens_assembly38.fasta")
 }
 ```
 
@@ -150,6 +150,75 @@ methods {
     new_sm_tag = methods.sanitize_uclahs_cds_id(sm_tags[0])
 }
 ```
+
+### Capture process outputs, even after failures
+`methods.setup_process_afterscript` is a drop-in replacement for this method of capturing process log files:
+
+```Nextflow
+// Old technique
+process xxx {
+    publishDir path: "${params.log_output_dir}/process-log",
+        pattern: ".command.*",
+        mode: "copy",
+        saveAs: { "${task.process.replace(':', '/')}-${sample_id}/log${file(it).getName()}" }
+
+    output:
+    path(".command.*")
+```
+
+The above method does not produce any output files if the process fails. In order to always capture the log files, use the following:
+
+```Nextflow
+includeConfig "/path/to/common_methods.config"
+...
+methods {
+    ...
+    methods.setup_process_afterscript()
+}
+```
+
+> [!NOTE]
+> `methods.setup_process_afterscript()` duplicates the effect of defining `publishDir` and `output: path(".command.*")` for every process. Although there is no harm in using both techniques simultaneously, for clarity it is recommended to only use one.
+
+The output path is controlled by the following two [custom process directives](https://www.nextflow.io/docs/latest/process.html#ext):
+
+| Name | Default Value |
+| --- | --- |
+| `process.ext.log_dir` | `task.process.replace(':', '/')` |
+| `process.ext.log_dir_suffix` | `''` |
+
+Each of the above can be overridden by individual processes.
+
+The final directory path is `${params.log_output_dir}/process-log/${task.ext.log_dir}${task.ext.log_dir_suffix}`.
+
+#### Disabling for individual processes
+
+```Nextflow
+process xxx {
+
+    ext capture_logs: false
+```
+
+#### Combining with `afterScript`
+
+> [!IMPORTANT]
+> This method sets `process.afterScript`. If you define another `afterScript` (either globally or for a specific process), you must use this technique to combine both scripts.
+
+The `afterScript` closure established by `methods.setup_process_afterscript()` is also stored as `process.ext.commonAfterScript`. If a process requires another `afterScript`, it should be combined with the one defined here like so:
+
+```Nextflow
+process xxx {
+    afterScript {
+        [
+            "echo 'Before the common script'",
+            task.ext.commonAfterScript ?: "",
+            "echo 'After the common script'"
+        ].join("\n")
+    }
+```
+
+Due to the [Elvis operator](https://groovy-lang.org/operators.html#_elvis_operator), the above snippet is safe to use even if `methods.setup_process_afterscript()` is not used.
+
 
 ## References
 1. `nf-core` - https://nf-co.re/
