@@ -5,7 +5,8 @@ result = JUnitCore.runClasses \
     ExampleTests, \
     SetEnvTests, \
     AlignMethodsTests, \
-    BamParserTests
+    BamParserTests, \
+    ResourceTests
 
 String message = "Ran: " + result.getRunCount() + ", Ignored: " + result.getIgnoreCount() + ", Failed: " + result.getFailureCount()
 if (result.wasSuccessful()) {
