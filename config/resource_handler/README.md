@@ -36,7 +36,7 @@ The resource handler requires a JSON file containing allocation information, in 
                 "fraction": 0.23,
                 "max": "10 GB"
             }
-        },
+        }
     },
     "default": {
         "process1": {
@@ -62,7 +62,7 @@ The resource handler requires a JSON file containing allocation information, in 
                 "fraction": 0.23,
                 "max": "10 GB"
             }
-        },
+        }
     }
 }
 ```
