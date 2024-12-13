@@ -19,7 +19,7 @@ ENV NXF_LAUNCHER=/.nextflow/tmp/launcher/nextflow-one_${NEXTFLOW_VERSION}/buildk
 RUN sed \
         -i \
         -e 's/"nextflow.cli.Launcher"/"groovy.ui.GroovyMain"/' \
-        -e 's|"-classpath" "|"-classpath" "/bljars/junit-4.13.2.jar:/bljars/hamcrest-core-1.3.jar:/bljars/groovy-test-3.0.19.jar:/bljars/system-rules-1.19.0.jar:$BL_CLASSPATH:|' \
+        -e "s|\"-classpath\" \"|\"-classpath\" \"$(find /bljars/ -not -name 'groovy-3*' -type f -printf "%p:"):|" \
         ${NXF_LAUNCHER}/classpath-${NEXTFLOW_MD5}
 
 COPY validator /usr/local/validator
